@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+
+  <script type="text/javascript" src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js" ></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>FIND MY BOOK</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/components/tab-panel/tab-panel.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/themes/light.css" >
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/shoelace.js"></script>
+</head>
+
+<body>
+
+<audio autoplay="autoplay" loop=""> <source src="img/background.mp3"></audio>
+      
+</audio>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><svg viewBox="0 0 1320 300">
+  <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+      FIND&nbsp;&nbsp;MY&nbsp;&nbsp;BOOK
+  </text>
+</svg></h1>  
+
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#buy" data-after="Buy">Buy</a></li>
+            <li><a href="#sell" data-after="Sell">Sell</a></li>
+            <li><a href="#community" data-after="Community">Community</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div><h1 style="font-size: 4rem;">Here is a girl named Lily,<span></span></h1>
+        <h1 style="font-size: 4rem;">she is a poor book-lover. <span></span></h1>
+        <h1 style="font-size: 4rem;">Can you help her?<span></span></h1>
+        <a href="#choice" class="cta">Help her!</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+
+  <!-- About Section -->
+  <section id="choice">
+    <div class="choice container">
+      <div class="sub-main">
+      <a href="#sell" class="button-three">Sell books</a>
+      <a href="#buy" class="button-three">Buy books</a>
+      <a href="#community" class="button-three">Community</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- End choice Section -->
+
+  <!-- Start sell Section -->
+  <section id="sell">
+  <div class="container">
+    <form>
+      <div class="step step-1 active">
+        <div class="form-group">
+        <sl-input size='large' label="Nickname" help-text="What would you like people to call you?"></sl-input>
+        </div>
+        <div class="form-group">
+          <label>Classification</label>
+          <sl-select pill size='large'>
+            <sl-menu-item value="text-book">Text Book</sl-menu-item>
+            <sl-menu-item value="rare-book">Rare book</sl-menu-item>
+            <sl-menu-item value="Out-of-print-book">Out-of-print book</sl-menu-item>
+          </sl-select>
+        </div>
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+      <div class="step step-2">
+        <div class="form-group">
+          <sl-input size='large' label="Book Title"></sl-input>
+        </div>
+        <div class="form-group">
+          <sl-input size='large' label="Author"></sl-input>
+        </div>
+        <div class="form-group">
+          <sl-input size='large' label="Publishing House"></sl-input>
+        </div>
+        <div class="form-group">
+          <sl-input size='large' label="Pricing"></sl-input>
+        </div>
+        <button type="button" class="previous-btn">Prev</button>
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+      <div class="step step-3">
+        <div class="form-group">
+          <sl-input size='large' label="Phone Number"></sl-input>
+        </div>
+        <div class="form-group">
+          <sl-input size='large' label="Email"></sl-input>
+        </div>
+        <div class="form-group">
+          <sl-input size='large' label="Address"></sl-input>
+        </div>
+        <button type="button" class="previous-btn">Prev</button>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+  <!-- End About Section -->
+
+<section id="buy">
+  <div class="container wrap">
+        <ul class="list">
+            <li class="item active">
+               <sl-card class="card-overview">
+                <img
+                  slot="image"
+                  src="img/textbook1.jpg"
+                  alt="textbook1"
+                >
+                <strong>James Clear&nbsp;&nbsp;&nbsp;&nbsp;$16.99</strong><br>
+                Atomic Habits<br>
+                <small>2018</small>
+
+                <div slot="footer">
+                  <sl-button variant="primary" pill>Buy it !</sl-button>
+                  <sl-rating readonly  precision="0.5" value="4.5"></sl-rating>
+                </div>
+              </sl-card>
+            </li>
+            <li class="item">
+              <sl-card class="card-overview">
+                <img
+                  slot="image"
+                  src="img/textbook2.jpg"
+                  alt="textbook2"
+                >
+
+                <strong>Hamish Blake&nbsp;&nbsp;&nbsp;&nbsp;$12.99</strong><br>
+               Textbook Romance<br>
+                <small>2012</small>
+
+                <div slot="footer">
+                  <sl-button variant="primary" pill>Buy it !</sl-button>
+                  <sl-rating readonly  precision="0.5" value="4.5"></sl-rating>
+                </div>
+              </sl-card>
+            </li>
+            <li class="item">
+              <sl-card class="card-overview">
+                <img
+                  slot="image"
+                  src="img/textbook3.jpg"
+                  alt="textbook3"
+                >
+
+                <strong>William Spaniel&nbsp;&nbsp;&nbsp;&nbsp;$26.78</strong><br >
+              Game Theory 101<br >
+                <small>unknown</small>
+
+                <div slot="footer">
+                  <sl-button variant="primary" pill>Buy it !</sl-button>
+                  <sl-rating readonly  precision="0.5" value="4.5"></sl-rating>
+                </div>
+              </sl-card>
+            </li>
+            <li class="item">
+              <sl-card class="card-overview">
+                <img
+                  slot="image"
+                  src="img/textbook1.jpg"
+                  alt="textbook1"
+                >
+
+                <strong>James Clear&nbsp;&nbsp;&nbsp;&nbsp;$16.99</strong><br>
+                Atomic Habits<br>
+                <small>2018</small>
+
+                <div slot="footer">
+                  <sl-button variant="primary" pill>Buy it !</sl-button>
+                  <sl-rating readonly  precision="0.5" value="4.5"></sl-rating>
+                </div>
+              </sl-card>
+            </li>
+            <li class="item">
+              <sl-card class="card-overview">
+                <img
+                  slot="image"
+                  src="img/textbook1.jpg"
+                  alt="textbook1"
+                >
+
+                <strong>James Clear&nbsp;&nbsp;&nbsp;&nbsp;$16.99</strong><br>
+                Atomic Habits<br>
+                <small>2018</small>
+
+                <div slot="footer">
+                  <sl-button variant="primary" pill>Buy it !</sl-button>
+                  <sl-rating readonly  precision="0.5" value="4.5"></sl-rating>
+                </div>
+              </sl-card>
+            </li>
+        </ul>
+        <ul class="pointList">
+            <li class="point active" data-index = 0></li>
+            <li class="point" data-index = 1></li>
+            <li class="point" data-index = 2></li>
+            <li class="point" data-index = 3></li>
+            <li class="point" data-index = 4></li>
+        </ul>
+        <!-- <button class="btn" id="leftBtn"> <h1><<<</h1> </button>  -->
+        <!-- <button class="btn" id="rightBtn"> <h1>>>></h1> </button> -->
+  </div>
+</section>
+
+
+<section id="community">
+  <div class="container">
+    <div class="bbs">
+    <header><span onclick="iWantPost()">Posting</span></header>
+    <section>
+        <ul id="ul-lists">
+            
+            <li>
+               <div>
+                   <img src="img/user1.jpg" alt="">
+               </div>
+               <h2>The best textbook for learning English?</h2>
+               <p><span>Quesion</span><span>2022-10-13 10:09:52</span></p>
+            </li>
+            
+        </ul>
+    </section>
+    <div class="post" id="post1">
+        <sl-input size='meidum' label="Title"></sl-input>
+        <label>Classification</label>
+          <sl-select pill size='meidum'>
+            <sl-menu-item value="Quesion">Question</sl-menu-item>
+            <sl-menu-item value="Answer">Answer</sl-menu-item>
+          </sl-select>
+        <textarea class="content"></textarea>
+        <input class="btn" value="post" onclick="post()">
+    </div>
+</div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>FIND</span> MY <span>BOOK</span></h1>
+      </div>
+      <h2>To Help You Find Your Book.</h2>
+    
+      <p>Copyright © 2022. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+
+</html>
