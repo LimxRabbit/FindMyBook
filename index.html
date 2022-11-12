@@ -18,15 +18,12 @@
 
 <body>
 
-<audio autoplay="autoplay" loop=""> <source src="img/background.mp3"></audio>
-      
-</audio>
   <!-- Header -->
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
         <div class="brand">
-          <a href="#hero">
+          <a href="#description">
             <h1><svg viewBox="0 0 1320 300">
   <text x="50%" y="50%" dy=".35em" text-anchor="middle">
       FIND&nbsp;&nbsp;MY&nbsp;&nbsp;BOOK
@@ -36,11 +33,11 @@
           </a>
         </div>
         <div class="nav-list">
-          <div class="hamburger">
+          <div class="navi">
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#description" data-after="Home">Home</a></li>
             <li><a href="#buy" data-after="Buy">Buy</a></li>
             <li><a href="#sell" data-after="Sell">Sell</a></li>
             <li><a href="#community" data-after="Community">Community</a></li>
@@ -52,9 +49,9 @@
   <!-- End Header -->
 
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
+  <!-- description Section  -->
+  <section id="description">
+    <div class="description container">
       <div><h1 style="font-size: 4rem;">Here is a girl named Lily,<span></span></h1>
         <h1 style="font-size: 4rem;">she is a poor book-lover. <span></span></h1>
         <h1 style="font-size: 4rem;">Can you help her?<span></span></h1>
@@ -62,7 +59,7 @@
       </div>
     </div>
   </section>
-  <!-- End Hero Section  -->
+  <!-- End description Section  -->
 
 
   <!-- About Section -->
@@ -125,7 +122,7 @@
           <sl-input size='large' label="Address"></sl-input>
         </div>
         <button type="button" class="previous-btn">Prev</button>
-        <button type="submit" class="submit-btn">Submit</button>
+        <button type="submit" class="submit-btn" onclick="alert('提交成功')">Submit</button>
       </div>
     </form>
   </div>
@@ -249,16 +246,17 @@
                <div>
                    <img src="img/user1.jpg" alt="">
                </div>
-               <h2>The best textbook for learning English?</h2>
+               
                <p><span>Quesion</span><span>2022-10-13 10:09:52</span></p>
+               <h2>Write your question and have a discussion ~</h2>
             </li>
             
         </ul>
     </section>
     <div class="post" id="post1">
-        <sl-input size='meidum' label="Title"></sl-input>
+        <sl-input id="post-title" size='meidum' label="Title" value="HELP"></sl-input>
         <label>Classification</label>
-          <sl-select pill size='meidum'>
+          <sl-select id="selectQA" value="Quesion" pill size='meidum'>
             <sl-menu-item value="Quesion">Question</sl-menu-item>
             <sl-menu-item value="Answer">Answer</sl-menu-item>
           </sl-select>
@@ -268,6 +266,7 @@
 </div>
   </div>
 </section>
+
 
   <!-- Footer -->
   <section id="footer">
