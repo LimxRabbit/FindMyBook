@@ -1,11 +1,11 @@
-
-const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+const navi = document.querySelector('.header .nav-bar .nav-list .navi');
 const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+//navigation
 const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
 const header = document.querySelector('.header.container');
 
-hamburger.addEventListener('click', () => {
-	hamburger.classList.toggle('active');
+navi.addEventListener('click', () => {
+	navi.classList.toggle('active');
 	mobile_menu.classList.toggle('active');
 });
 
@@ -20,12 +20,14 @@ document.addEventListener('scroll', () => {
 
 menu_item.forEach((item) => {
 	item.addEventListener('click', () => {
-		hamburger.classList.toggle('active');
+		navi.classList.toggle('active');
 		mobile_menu.classList.toggle('active');
 	});
 });
 
- const steps = Array.from(document.querySelectorAll("form .step"));
+
+// sell section
+const steps = Array.from(document.querySelectorAll("form .step"));
 const nextBtn = document.querySelectorAll("form .next-btn");
 const prevBtn = document.querySelectorAll("form .previous-btn");
 const form = document.querySelector("form");
@@ -65,9 +67,8 @@ function changeStep(btn) {
   steps[index].classList.add("active");
 }
 
-
-
- function iWantPost() {
+//community section
+function iWantPost() {
         document.getElementById("post1").style.display = "block";
     }
 
@@ -100,11 +101,11 @@ function post() {
 
     li.appendChild(h1);
     h1.className = ".bbs section ul li h1";
-    h1.innerHTML = document.getElementById("title").value;
+    h1.innerHTML = document.getElementById("post-title").value;
 
     li.appendChild(p);
     p.className = ".bbs section ul li p";
-    p.innerHTML =  document.getElementsByTagName("select")[0].value+"&nbsp;&nbsp;&nbsp;&nbsp;";
+    p.innerHTML =  document.getElementById("selectQA").value+"&nbsp;&nbsp;&nbsp;&nbsp;";
 
  
     p.appendChild(span);
@@ -120,11 +121,13 @@ function post() {
 
     span.innerHTML =  year + "-" + month + "-" + day + "&nbsp;" + hour + ":" + minute + ":" + second;
 
-    document.getElementById("title").value = "";
-    document.getElementsByTagName("select")[0].value = "";
+    
+    document.getElementById("selectQA").value = "Question";
     ul.insertBefore(li, ul.firstElementChild);
 }
 
+
+//buy section
 var items = document.querySelectorAll(".item");
 var points = document.querySelectorAll(".point")
 var all = document.querySelector(".wrap")
